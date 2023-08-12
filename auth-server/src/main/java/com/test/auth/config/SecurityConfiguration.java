@@ -1,6 +1,6 @@
 package com.test.auth.config;
 
-import com.test.auth.filter.CxcSecurityFilter;
+import com.test.auth.filter.TestSecurityFilter;
 import com.test.auth.service.impl.UserDetailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -18,10 +18,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final UserDetailServiceImpl userDetailService;
 
-    private final CxcSecurityFilter securityFilter;
+    private final TestSecurityFilter securityFilter;
 
     @Autowired
-    public SecurityConfiguration(UserDetailServiceImpl userDetailService, CxcSecurityFilter securityFilter) {
+    public SecurityConfiguration(UserDetailServiceImpl userDetailService, TestSecurityFilter securityFilter) {
         this.userDetailService = userDetailService;
         this.securityFilter = securityFilter;
     }

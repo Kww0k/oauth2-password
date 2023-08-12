@@ -22,11 +22,11 @@ import static com.test.auth.constants.AuthConstants.*;
 import static com.test.auth.enums.AppHttpCodeEnum.CXC_AUTH;
 
 @Component
-public class CxcSecurityFilter extends OncePerRequestFilter {
+public class TestSecurityFilter extends OncePerRequestFilter {
     private final RedisCache redisCache;
 
     @Autowired
-    public CxcSecurityFilter(RedisCache redisCache) {
+    public TestSecurityFilter(RedisCache redisCache) {
         this.redisCache = redisCache;
     }
 
