@@ -1,0 +1,16 @@
+security:
+  oauth2:
+    client:
+      #基操
+      client-id: client
+      client-secret: secret
+    resource:
+      #因为资源服务器得验证你的Token是否有访问此资源的权限以及用户信息，所以只需要一个验证地址
+      token-info-uri: http://你的认真服务器地址/sso/oauth/check_token
+      jwt:
+        key-value: yourKey
+server:
+  port: 8080
+spring:
+  application:
+    name: test-server

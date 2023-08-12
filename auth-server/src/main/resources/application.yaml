@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: auth-server
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://你的数据库地址
+    username:
+    password:
+  redis:
+    host: redis地址
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+server:
+  port: 8080
+  servlet:
+    context-path: /sso
